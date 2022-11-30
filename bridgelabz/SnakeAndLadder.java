@@ -2,10 +2,32 @@ package com.bridgelabz;
 
 public class SnakeAndLadder {
 	public static void main(String[] args) {
-		int playerPosition = 0;
-		System.out.println("Position of player is " + playerPosition);
-		// To Get Number Between 1-6
-		int randomCheck = (int) Math.floor(Math.random() * 10) % 6 + 1;
-		System.out.println(randomCheck);
-}
+		int position = 0;
+
+        int dice = (int) Math.floor(Math.random() * 10) % 6 + 1;
+        System.out.println("DiceNumber is : " + dice);
+
+        int option = (int) Math.floor(Math.random() * 10) % 3;
+        System.out.print("Player option is : ");
+
+        switch (option) {
+            case 0:
+                position += dice;
+                System.out.println("Ladder");
+                System.out.println("Position of the player after the ladder is : " + position);
+                break;
+
+            case 1:
+                position -=  dice;
+                System.out.println("Snake");
+                System.out.println("Position of the player after the Snake is : " + position);
+                break;
+
+            case 2:
+                System.out.println("No play");
+                System.out.println("Position of the player remains same");
+                break;
+        }
+
+	}
 }
