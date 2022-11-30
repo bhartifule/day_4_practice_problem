@@ -1,49 +1,81 @@
 package com.bridgelabz;
 
+import java.util.Random;
+
 public class SnakeAndLadder {
 	public static void main(String[] args) {
-		System.out.println("Player Exact Winning Position is: ");
+		 int player1 = 0;
+	        int player2 = 0;
+	        Random a = new Random();
+	        int dice;
+	        System.out.println("Welcome to snake and ladder program with 2 players");
+	        do {
+	            dice = a.nextInt(6) + 1;
+	            int option = (int) Math.floor(Math.random() * 10) % 3;
+	            switch (option) {
+	                case 0:
+	                    player1 += dice;
+	                    System.out.println("Ladder");
+	                    if (player1 > 100) {
+	                        player1 -= dice;
+	                    }
+	                    System.out.println("Position of the player1 after the ladder is : " + player1);
+	                    break;
 
-		int EXACT_POSITION = 100;
-		int position = 0;
-		int count = 0;
-		while (position < EXACT_POSITION) {
+	                case 1:
+	                    player1 -= dice;
+	                    System.out.println("Snake");
+	                    if (player1 < 0) {
+	                        player1 = 0;
+	                        System.out.println("Player restart from zero: ");
+	                    }
+	                    System.out.println("Position of the player1 after the Snake is : " + player1);
+	                    break;
 
-			int dice = (int) Math.floor(Math.random() * 10) % 6 + 1;
-			System.out.println("DiceNumber is : " + dice);
+	                case 2:
+	                    System.out.println("No play");
+	                    System.out.println("Position of the player1 remains same");
+	                    break;
+	            }
+	            if (player1 == 100) {
+	                System.out.println("Player1 is the winner");
+	                return;
+	            }
+	            int option1 = (int) Math.floor(Math.random() * 10) % 3;
 
-			int option = (int) Math.floor(Math.random() * 10) % 2;
-			System.out.println("Selected player option : " + option);
+	            switch (option1) {
+	                case 0:
+	                    player2 += dice;
+	                    System.out.println("Ladder");
+	                    if (player2 > 100) {
+	                        player2 -= dice;
+	                    }
+	                    System.out.println("Position of the player2 after the ladder is : " + player2);
+	                    break;
 
-			switch (option) {
-			case 0:
-				position += dice;
-				System.out.println("Ladder");
-				if (position > 100) {
-					position -= dice;
-				}
-				System.out.println("Position for the player after the ladder is : " + position);
-				break;
+	                case 1:
+	                    player2 -= dice;
+	                    System.out.println("Snake");
+	                    if (player2 < 0) {
+	                        player2 = 0;
+	                        System.out.println("Player2 restart from zero: ");
+	                    }
+	                    System.out.println("Position of the player2 after the Snake is : " + player2);
+	                    break;
 
-			case 1:
-				position -= dice;
-				System.out.println("Snake");
-				if (position < 0) {
-					position = 0;
-					System.out.println("Player restart from zero: ");
-				}
-				System.out.println("Position for the player after the Snake is : " + position);
-				break;
-
-			case 2:
-				System.out.println("No play");
-				System.out.println("Position of the player remains same");
-				break;
-			}
-			count++;
-			System.out.println("The number of times dicerolled : " + count);
-		}
+	                case 2:
+	                    System.out.println("No play");
+	                    System.out.println("Position of the player2 remains same");
+	                    break;
+	            }
+	            if (player2 == 100) {
+	                System.out.println("Player2 is the winner");
+	                return;
+	            }
+	        }while (player1 < 100 && player2 < 100) ;
 
 	}
+
+	
 	}
 
