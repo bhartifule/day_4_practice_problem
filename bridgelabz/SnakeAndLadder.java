@@ -2,23 +2,27 @@ package com.bridgelabz;
 
 public class SnakeAndLadder {
 	public static void main(String[] args) {
-		System.out.println("Player initial Position is: ");
+		System.out.println("Player Exact Winning Position is: ");
 
+		int EXACT_POSITION = 100;
 		int position = 0;
 
-		while (position < 100) {
+		while (position < EXACT_POSITION) {
 
 			int dice = (int) Math.floor(Math.random() * 10) % 6 + 1;
-			System.out.println("diceNumber is : " + dice);
+			System.out.println("DiceNumber is : " + dice);
 
 			int option = (int) Math.floor(Math.random() * 10) % 3;
-			System.out.println("selected player option : " + option);
+			System.out.println("Selected player option : " + option);
 
 			switch (option) {
 			case 0:
 				position += dice;
 				System.out.println("Ladder");
-				System.out.println("position for the player after the ladder is : " + position);
+				if (position > 100) {
+					position -= dice;
+				}
+				System.out.println("Position for the player after the ladder is : " + position);
 				break;
 
 			case 1:
@@ -28,7 +32,7 @@ public class SnakeAndLadder {
 					position = 0;
 					System.out.println("Player restart from zero: ");
 				}
-				System.out.println("position for the player after the Snake is : " + position);
+				System.out.println("Position for the player after the Snake is : " + position);
 				break;
 
 			case 2:
@@ -38,7 +42,6 @@ public class SnakeAndLadder {
 			}
 		}
 
-	
-
 	}
-}
+	}
+
