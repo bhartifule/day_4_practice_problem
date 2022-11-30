@@ -6,13 +6,13 @@ public class SnakeAndLadder {
 
 		int EXACT_POSITION = 100;
 		int position = 0;
-
+		int count = 0;
 		while (position < EXACT_POSITION) {
 
 			int dice = (int) Math.floor(Math.random() * 10) % 6 + 1;
 			System.out.println("DiceNumber is : " + dice);
 
-			int option = (int) Math.floor(Math.random() * 10) % 3;
+			int option = (int) Math.floor(Math.random() * 10) % 2;
 			System.out.println("Selected player option : " + option);
 
 			switch (option) {
@@ -40,6 +40,8 @@ public class SnakeAndLadder {
 				System.out.println("Position of the player remains same");
 				break;
 			}
+			count++;
+			System.out.println("The number of times dicerolled : " + count);
 		}
 
 	}
