@@ -1,7 +1,9 @@
 package com.bridgelabz;
 
 public class SnakeAndLadder {
-public static void main(String[] args) {
-	System.out.println("welcome to snake and ladder");
+	public static void main(String[] args) {
+		int playerPosition = 0;
+		System.out.println("Position of player is " + playerPosition);
+	
 }
 }
