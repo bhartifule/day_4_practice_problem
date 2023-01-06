@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.Day4;
 
 import java.util.Random;
 
