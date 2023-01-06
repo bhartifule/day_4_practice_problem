@@ -12,7 +12,7 @@ public class SnakeAndLadder {
 			System.out.println("diceNumber is : " + dice);
 
 			int option = (int) Math.floor(Math.random() * 10) % 3;
-			System.out.println("selected player option : " + option);
+			System.out.println("selected players option : " + option);
 
 			switch (option) {
 			case 0:
