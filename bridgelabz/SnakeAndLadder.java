@@ -14,7 +14,7 @@ public class SnakeAndLadder {
             case 0:
                 position += dice;
                 System.out.println("Ladder");
-                System.out.println("Position of the player after the ladder is : " + position);
+                System.out.println("Position of the player after the ladder  : " + position);
                 break;
 
             case 1:
