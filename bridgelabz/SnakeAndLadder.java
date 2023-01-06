@@ -22,7 +22,7 @@ public class SnakeAndLadder {
 				if (position > 100) {
 					position -= dice;
 				}
-				System.out.println("Position for the player after the ladder is : " + position);
+				System.out.println("Position for the player after the ladder  : " + position);
 				break;
 
 			case 1:
