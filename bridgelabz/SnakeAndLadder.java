@@ -27,7 +27,7 @@ public class SnakeAndLadder {
 	                    System.out.println("Snake");
 	                    if (player1 < 0) {
 	                        player1 = 0;
-	                        System.out.println("Player restart from zero: ");
+	                        System.out.println("Player restart from Zero: ");
 	                    }
 	                    System.out.println("Position of the player1 after the Snake is : " + player1);
 	                    break;
