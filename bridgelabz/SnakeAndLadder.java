@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.Day4;
 
 public class SnakeAndLadder {
 	public static void main(String[] args) {
