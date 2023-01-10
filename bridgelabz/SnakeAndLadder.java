@@ -3,7 +3,8 @@ package com.bridgelabz.Day4;
 import java.util.Random;
 
 public class SnakeAndLadder {
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		 int player1 = 0;
 	        int player2 = 0;
 	        Random a = new Random();
