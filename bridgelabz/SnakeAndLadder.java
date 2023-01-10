@@ -32,7 +32,7 @@ public class SnakeAndLadder {
 					position = 0;
 					System.out.println("Player restart from zero: ");
 				}
-				System.out.println("Position for the player after the Snake is : " + position);
+				System.out.println("Position for the player after the Snake is : " + position );
 				break;
 
 			case 2:
