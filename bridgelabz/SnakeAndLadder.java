@@ -1,7 +1,8 @@
 package com.bridgelabz.Day4;
 
 public class SnakeAndLadder {
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		System.out.println("Player Exact Winning Position is: ");
 
 		int EXACT_POSITION = 100;
